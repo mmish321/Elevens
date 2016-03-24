@@ -7,8 +7,7 @@
 
 ## Questions  
 1. A card is an object and a deck is an object defined as being made up of a group of cards. The two are seperate objects but deck is made of of another object, it is a composite relationship as a deck HAS - A card.    
-2.  
-6 Cards  :  
+2.  6 Cards  :  
 Jack of blue (point value = 11)   
 queen of blue (point value = 12)  
 king of blue (point value = 13)  
@@ -16,8 +15,7 @@ Jack of red (point value = 11)
 queen of red (point value = 12)   
 king of red (point value = 13)  
 
-3. 
-String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"}  
+3. String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"}  
 
 String[] suits = {"spades", "heart", "clubs", "diamond"}  
 
