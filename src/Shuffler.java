@@ -5,7 +5,7 @@ public class Shuffler {
 	 * The number of consecutive shuffle steps to be performed in each call
 	 * to each sorting procedure.
 	 */
-	private static final int SHUFFLE_COUNT = 1;
+	private static final int SHUFFLE_COUNT = 6;
 
 
 	/**
@@ -39,6 +39,15 @@ public class Shuffler {
 			System.out.println();
 		}
 		System.out.println();
+		
+		for (int i = 0; i < 10; i++) {
+		System.out.println(flip());
+		}
+		
+		System.out.println();
+		int[] help = {4321};
+		int[] meep = {1234};
+		System.out.println(arePermutations(help, meep));
 	}
 
 
@@ -83,5 +92,25 @@ public class Shuffler {
 		 values[k] = values[r];
 		 values[r] = temp;
 	  }
+	}
+	
+	public static String flip() {
+		int num = (int) ((Math.random() * 3) + 2);
+		if ( num == 2) {
+			return "tails";
+		}
+		else {
+			return "heads";
+		}
+	}
+	
+	public static boolean arePermutations(int[]a, int[]b) {
+		boolean arePermutations = true;
+		for (int i = 0; i < a.length; i++){
+			 if(a[i] == b[i]) {
+				 return false;
+			 }
+		}
+		return arePermutations;
 	}
 }
