@@ -1,18 +1,13 @@
 import java.util.Random;
 public class Shuffler {
 
-	/**
-	 * The number of consecutive shuffle steps to be performed in each call
-	 * to each sorting procedure.
-	 */
+
+	 
 	private static final int SHUFFLE_COUNT = 6;
 
 
-	/**
-	 * Tests shuffling methods.
-	 * @param args is not used.
-	 */
-	public static void main(String[] args) {
+	 
+public static void main(String[] args) {
 		
 		System.out.println("Results of " + SHUFFLE_COUNT +
 								 " consecutive perfect shuffles:");
@@ -44,19 +39,15 @@ public class Shuffler {
 		System.out.println(flip());
 		}
 		
-		System.out.println();
-		int[] help = {4321};
-		int[] meep = {1234};
-		System.out.println(arePermutations(help, meep));
+ 		System.out.println();
+		int[] help = {1,1,1,1};
+		int[] meep = {1,2,3,4};
+	     System.out.println(arePermutations(help,meep));
+		
 	}
 
 
-	/**
-	 * Apply a "perfect shuffle" to the argument.
-	 * The perfect shuffle algorithm splits the deck in half, then interleaves
-	 * the cards in one half with the cards in the other.
-	 * @param values is an array of integers simulating cards to be shuffled.
-	 */
+
 	public static void perfectShuffle(int[] values) {
 		for (int j = 0; j <= (values.length + 1)/ 2; j++) {
 			int k = 0;
@@ -105,12 +96,35 @@ public class Shuffler {
 	}
 	
 	public static boolean arePermutations(int[]a, int[]b) {
-		boolean arePermutations = true;
-		for (int i = 0; i < a.length; i++){
-			 if(a[i] == b[i]) {
-				 return false;
-			 }
+		if ( a.length != b.length) {
+			return false;
 		}
-		return arePermutations;
+		for (int i = 1; i < a.length; i++){
+			int temp = a[i];
+			int j;
+			for (j = i-1; j >= 0 && temp < a[j]; j--) {
+				a[j + 1] = a[j];
+			    a[j] = temp;
+			}
+	    }
+		for (int i = 1; i < b.length; i++){
+			int temp = b[i];
+			int j;
+			for (j = i-1; j >= 0 && temp < b[j]; j--) {
+				b[j + 1] = b[j];
+			    b[j] = temp;
+			}
+	    }
+		
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] != b[i]) {
+				return false;
+			}
+		}
+		return true;
+		
 	}
+		
+	
+	
 }
