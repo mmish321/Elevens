@@ -3,6 +3,7 @@
  *
  * <code>Card</code> represents a playing card.
  */
+package Buggy2;
 public class Card {
 
 	/**

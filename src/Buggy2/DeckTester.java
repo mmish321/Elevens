@@ -1,6 +1,7 @@
 /**
  * This is a class that tests the Deck class using assert statements.
  */
+package Buggy2;
 public class DeckTester {
 
 	/**

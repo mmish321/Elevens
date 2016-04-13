@@ -1,6 +1,7 @@
 /**
  * This is a class that tests the Deck class using assert statements.
  */
+package Buggy1;
 public class DeckTester {
 
 	/**
@@ -66,7 +67,8 @@ public class DeckTester {
 
 		d.shuffle();
 		c = d.deal();
-		assert c != null : "1st card dealt after shuffle is null.";
+		assert c == null : "1st card dealt after shuffle is null.";
+		System.out.println(c);
 		aceIsFirst = c.matches(new Card("ace", "hearts", 1));
 		twoIsFirst = c.matches(new Card("2", "hearts", 2));
 		assert (aceIsFirst || twoIsFirst) : "1st card dealt after shuffle is "
