@@ -2,3 +2,5 @@
 
 
 ## Exercises : 
+1. Finished
+2. Succesfully created a deck!
