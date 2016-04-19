@@ -172,6 +172,13 @@ public class ElevensBoard {
 			return true;
 		}
 		return false;
+	}  
+	
+	public static void printCards(ElevensBoard board) {
+		List<Integer> cIndexes = board.cardIndexes();  
+		for (int i : cIndexes) {
+			System.out.println((board.cardAt(i).toString()));
+		}
 	}
 
 	/**
