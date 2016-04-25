@@ -1,3 +1,7 @@
 # A8  
 ## Questions  
-1. 
+1. The thirteens game has the kings removed singly due to its the only card that singly holds the value of thirteen compared to other combinations of cards. Similar to elevens, thirteen has the pairs of card add up to a certain number however for thirteens the pairs must add up to thirteen. Winning thirteens seems much easier due to the fact that there are more combinations of cards that add up to thirteen compared to the combinations of cards that add up to eleven. Chances of winning are about 1 out of 2.  Thirteens also uses a 10 card board not a 13 card board.
+Tens uses a 13 card board and is similar to elevens where the pairs have to add up to a number, in this case 10. Also quartets of kings, queens, jacks, and tens all of the same rank are allowed to be removed all together due to the fact that all of them are greater than or equal to ten. Chances are 1 in 8, much harder to win than thirteens.   
+2. The size variable is initialized in the constructor and then the constructor also creates cards based on the size and a deck of the collection of cards. The size getter method returns the length of the array of cards.  
+3. isLegal and anotherIsPossible
+Both of these methods cover the differences between Elevens and Thirteens and Tens because these methods are pretty much checking and making sure the moves done are following the rules of the separate games. 
