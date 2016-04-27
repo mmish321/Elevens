@@ -58,7 +58,6 @@ public class ElevensBoard extends Board {
 		}
 		return true;
 	
-		
 	}
 
 	/**
@@ -107,14 +106,14 @@ public class ElevensBoard extends Board {
 	    boolean jack = false;
 	    boolean king = false;
 	    for (int j = 0; j < selectedCards.size();j++) {
-			if (cards[(selectedCards.get(j))].pointValue() == 11) {
+			if (cards[(selectedCards.get(j))].rank().equals("jack") ) {
 				jack = true;
 			}
-			if (cards[(selectedCards.get(j))].pointValue() == 12) {
+			if (cards[(selectedCards.get(j))].rank().equals("queen")) {
 				queen = true;
 			}
 
-			if (cards[(selectedCards.get(j))].pointValue() == 13) {
+			if (cards[(selectedCards.get(j))].rank().equals("king")) {
 				king = true;
 			}
 

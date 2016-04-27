@@ -2,5 +2,6 @@
 ## Exercises  
 Finished all exercises  
 ## Questions  
-1. Size is not a method that will change due to the differnt boards becuase it literally returns the size of a list.  
-2. Again like stated before 
+1. Size is not a method that will change due to the different boards because it literally returns the size of a list. It's functionality is the same regardless of the game. 
+2. Again like stated before the replacing of cards and the dealing of cards is something that is not unique to any of the boards, in fact it is a method in which the boards all use the same way, so that is why there is not abstract method for those methods.  
+3. Well the interface would  allow the elevens GUI to call isLegal and anotherPlayIsPossible by having the ElevenBoard implement them. This alternate design will work for the methods isLegal and anotherPlayisPossible as it will allow each one of the boards to implement those methods to the rules of that game, however the abstract class is still a better design due to the fact in each of the boards, you would have to write the methods, deal, replace, size.. etc again and again even though they're the same methods because the interface does not have those methods. The abstract class allows you to not only specify the methods that are different for the different boards but also prevent the copying of code between the boards that are exactly the same. 
